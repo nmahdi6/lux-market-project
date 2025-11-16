@@ -2,6 +2,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.utils.translation import gettext_lazy as _ 
+
+
+admin.site.site_header = _("مدیریت ")
+admin.site.site_title = _("وبگاه")
+admin.site.index_title = _("خوش آمدید")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

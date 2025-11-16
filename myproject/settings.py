@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-
+from django.utils.translation import gettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third-party
-    'rest_framework',   # اگر می‌خوای API بسازی
-    'mptt',             # اگر از django-mptt برای دسته‌بندی درختی استفاده می‌کنی
+    'rest_framework',  
+    'mptt',
+    
 
     "review", 
     "customer",
@@ -126,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 
-LANGUAGE_CODE = 'fa'   # اگر می‌خواهی فارسی باشه
+LANGUAGE_CODE = 'fa-IR'
 TIME_ZONE = 'Asia/Tehran'
 USE_I18N = True
 USE_L10N = True
@@ -151,7 +152,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # مسیرهای اضافی (برای فایل‌های خود پروژه)
 STATICFILES_DIRS = [
-    BASE_DIR / "main" / "static",
+    BASE_DIR / "static",
 ]
 
 # Media files (uploads)

@@ -1,0 +1,67 @@
+/* تغییر رنگ‌های آبی به سبز */
+#header {
+    background: #ba1873 !important;  /* سبز */
+    color: white;
+}
+
+div.breadcrumbs {
+    background: #c92096 !important;  /* سبز روشن */
+    color: white;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #e00ec8 !important;  /* سبز آبی */
+    color: rgb(176, 8, 8);
+}
+
+/* تغییر دکمه‌های آبی */
+.button, input[type=submit], input[type=button], .submit-row input {
+    background: #9c28a7 !important;
+    color: rgb(215, 37, 37);
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #c920c3 !important;
+}
+
+/* تغییر لینک‌های آبی */
+a:link, a:visited {
+    color: #a72889 !important;
+}
+
+a:hover {
+    color: #c92088 !important;
+}
+
+/* راست چین کردن و فونت فارسی */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* راست چین کردن جدول‌ها */
+thead th {
+    text-align: right !important;
+}
+
+td, th {
+    text-align: right !important;
+}
+
+/* راست چین کردن فرم‌ها */
+.form-row {
+    direction: rtl;
+}
+
+label {
+    text-align: right !important;
+    float: right !important;
+    direction: rtl;
+}
+
+/* راست چین کردن منوها */
+.breadcrumbs {
+    direction: rtl;
+    text-align: right;
+}
