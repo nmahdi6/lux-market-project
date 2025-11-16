@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-18ch*mslfix(h!j5enatiyhbpz8&3wm^c61ney-4jcg^xn5-^t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',   # فعلاً برای لوکال و آینده
+]
+
 
 
 # Application definition
@@ -42,18 +45,25 @@ INSTALLED_APPS = [
     'rest_framework',   # اگر می‌خوای API بسازی
     'mptt',             # اگر از django-mptt برای دسته‌بندی درختی استفاده می‌کنی
 
-    # apps (فعلاً خالی / بعداً اضافه می‌شود)
-    # 'brands.apps.BrandsConfig',
-    # 'products.apps.ProductsConfig',
-    # 'categories.apps.CategoriesConfig',
-    # 'inventory.apps.InventoryConfig',
-    # 'attributes.apps.AttributesConfig',
-    # 'options.apps.OptionsConfig',
+    "review", 
+    "customer",
+    "order",
+    "payment",
+    "shipment",
+    "coupon",
+    "brand",
+    "category",
+    "product",
+    "inventory",
+    "attributes",
+    "options",
+    "supplier",
 ]
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -132,13 +142,21 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [ BASE_DIR / "static" ]  # اختیاری برای فایل‌های محلی
+
+# مسیر نهایی برای collectstatic
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# مسیرهای اضافی (برای فایل‌های خود پروژه)
+STATICFILES_DIRS = [
+    BASE_DIR / "main" / "static",
+]
 
 # Media files (uploads)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
