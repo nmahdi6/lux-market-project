@@ -78,7 +78,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,13 +147,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
 
-# مسیر نهایی برای collectstatic
-STATIC_ROOT = BASE_DIR / "staticfiles"
-
-# مسیرهای اضافی (برای فایل‌های خود پروژه)
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Media files (uploads)
 MEDIA_URL = '/media/'

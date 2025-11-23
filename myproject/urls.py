@@ -11,6 +11,8 @@ admin.site.index_title = _("خوش آمدید")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('product.urls', namespace='product')),
+
     # path('api/', include('...')),
 ]
 
