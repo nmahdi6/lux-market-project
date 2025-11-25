@@ -15,3 +15,6 @@ def faq(request):
 
 def privacy_policy(request):
     return render(request, "privacy-policy.html")
+
+def terms_and_rules(request):
+    return render(request, "terms-and-rules.html")
