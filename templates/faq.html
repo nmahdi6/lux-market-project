@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en" dir="rtl">
 
@@ -13,12 +14,12 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="لوکس مارکت">
     <meta name="copyright" content="تمامی حقوق متعلق به لوکس مارکت است.">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/assets/images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/images/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href={%static "assets/images/favicon_io/apple-touch-icon.png"%}>
+    <link rel="icon" type="image/png" sizes="32x32" href={%static "assets/images/favicon_io/favicon-32x32.png"%}>
+    <link rel="icon" type="image/png" sizes="16x16" href={%static "assets/images/favicon_io/favicon-16x16.png"%}>
     <link rel="canonical" href="https://example.com/your-page-url">
-    <link rel="stylesheet" href="assets/js/plugin/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="{% static 'assets/js/plugin/swiper/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
     <link rel="preload" href="static/assets/fonts/payda/PeydaWebFaNum-Medium.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
@@ -44,7 +45,7 @@
                 <div class="lg:col-span-2 lg:order-1 order-2 col-span-4 w-full">
                     <a href="index.html">
                         <div class="lg:text-start text-center">
-                            <img class="md:h-12" src="static/assets/images/logo.png" loading="lazy" alt="">
+                            <img class="md:h-12" src={%static "assets/images/logo.png"%} loading="lazy" alt="">
                         </div>
                     </a>
                 </div>
@@ -448,7 +449,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-1.webp" loading="lazy"
+                                                            <img src={%static "assets/images/banner/banner-1.webp"%} loading="lazy"
                                                                 alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -598,7 +599,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-4.webp" loading="lazy"
+                                                            <img src={%static "assets/images/banner/banner-4.webp"%} loading="lazy"
                                                                 alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -747,7 +748,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-3.webp" loading="lazy"
+                                                            <img src={%static "assets/images/banner/banner-3.webp"%} loading="lazy"
                                                                 alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -900,7 +901,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-four-1.jpg"
+                                                            <img src={%static "assets/images/banner/banner-four-1.jpg"%}
                                                                 loading="lazy" alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -1053,7 +1054,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-four-3.jpg"
+                                                            <img src={%static "assets/images/banner/banner-four-3.jpg"%}
                                                                 loading="lazy" alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -1193,7 +1194,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-four-4.jpg"
+                                                            <img src={%static "assets/images/banner/banner-four-4.jpg"%}
                                                                 loading="lazy" alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -1349,7 +1350,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-11.jpg" loading="lazy"
+                                                            <img src={%static "assets/images/banner/banner-11.jpg"%} loading="lazy"
                                                                 alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -1497,7 +1498,7 @@
                                                 <div class="col-span-2">
                                                     <div class="ml-4">
                                                         <a href="">
-                                                            <img src="static/assets/images/banner/banner-33.webp"
+                                                            <img src={%static "assets/images/banner/banner-33.webp"%}
                                                                 loading="lazy" alt="" class="w-full rounded-lg">
                                                         </a>
                                                     </div>
@@ -2062,7 +2063,7 @@
                 <div class="sm:col-span-3 col-span-2 w-full">
                     <a href="/" itemprop="url">
                         <figure itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                            <img src="static/assets/images/logo.png" class="h-12" alt="لوگوی فروشگاه لوکس مارکت"
+                            <img src={%static "assets/images/logo.png"%} class="h-12" alt="لوگوی فروشگاه لوکس مارکت"
                                 itemprop="contentUrl">
                             <meta itemprop="caption" content="لوگوی رسمی فروشگاه لوکس مارکت">
                         </figure>
@@ -2138,17 +2139,15 @@
                     </h4>
                     <ul class="flex items-center space-x-4" role="list">
                         <li role="listitem"><a href="rubika-link" itemprop="sameAs"><img
-                                    src="static/assets/images/social/rubika.png" alt="ربیکا" class="size-7"></a></li>
-                        <li role="listitem"><a href="aparat-link" itemprop="sameAs"><img
-                                    src="static/assets/images/social/aparat.png" alt="آپارات" class="size-7"></a></li>
+                                    src={%static "assets/images/social/rubika.png" %} alt="ربیکا" class="size-7"></a></li>
                         <li role="listitem"><a href="bale-link" itemprop="sameAs"><img
-                                    src="static/assets/images/social/bale.png" alt="بله" class="size-7"></a></li>
+                                    src={%static "assets/images/social/bale.png"%} alt="بله" class="size-7"></a></li>
                         <li role="listitem"><a href="eitta-link" itemprop="sameAs"><img
-                                    src="static/assets/images/social/eitta.png" alt="ایتا" class="size-7"></a></li>
+                                    src={%static "assets/images/social/eitta.png"%} alt="ایتا" class="size-7"></a></li>
                         <li role="listitem"><a href="igap-link" itemprop="sameAs"><img
-                                    src="static/assets/images/social/igap.png" alt="ایگپ" class="size-7"></a></li>
+                                    src={%static "assets/images/social/igap.png"%} alt="ایگپ" class="size-7"></a></li>
                         <li role="listitem"><a href="sorush-link" itemprop="sameAs"><img
-                                    src="static/assets/images/social/sorush.png" alt="سروش" class="size-7"></a></li>
+                                    src={%static "assets/images/social/sorush.png"%} alt="سروش" class="size-7"></a></li>
                     </ul>
                     <h4 class="font-bold text-lg dark:text-white my-5" aria-label="عضویت در خبرنامه">عضویت در خبرنامه
                     </h4>
@@ -2176,7 +2175,7 @@
                             <a href="play-store-link" itemprop="downloadUrl" itemscope
                                 itemtype="http://schema.org/SoftwareApplication">
                                 <meta itemprop="applicationCategory" content="BusinessApplication">
-                                <img src="static/assets/images/application/google-play-app.svg" alt="دانلود از گوگل پلی"
+                                <img src={%static "assets/images/application/google-play-app.svg"%} alt="دانلود از گوگل پلی"
                                     class="h-12">
                             </a>
                         </li>
@@ -2184,14 +2183,14 @@
                             <a href="sibapp-link" itemprop="downloadUrl" itemscope
                                 itemtype="http://schema.org/SoftwareApplication">
                                 <meta itemprop="operatingSystem" content="Android">
-                                <img src="static/assets/images/application/app-sibapp.svg" alt="دانلود از سیب‌اپ" class="h-12">
+                                <img src={%static "assets/images/application/app-sibapp.svg" %} alt="دانلود از سیب‌اپ" class="h-12">
                             </a>
                         </li>
                         <li>
                             <a href="bazar-link" itemprop="downloadUrl" itemscope
                                 itemtype="http://schema.org/SoftwareApplication">
                                 <meta itemprop="operatingSystem" content="Android">
-                                <img src="static/assets/images/application/bazar-app.svg" alt="دانلود از بازار" class="h-12">
+                                <img src={%static "assets/images/application/bazar-app.svg"%} alt="دانلود از بازار" class="h-12">
                             </a>
                         </li>
                     </ul>
@@ -2211,14 +2210,14 @@
                     <ul class="flex lg:justify-end justify-center items-center space-x-4">
                         <li class="border border-gray-300 p-3 rounded-xl">
                             <a href="/trust-seals" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="static/assets/images/namad/namad-01.png" class="h-25" alt="نماد اعتماد الکترونیک"
+                                <img src={%static "assets/images/namad/namad-01.png"%} class="h-25" alt="نماد اعتماد الکترونیک"
                                     itemprop="contentUrl">
                                 <meta itemprop="caption" content="نماد رسمی اعتماد الکترونیک">
                             </a>
                         </li>
                         <li class="border border-gray-300 p-3 rounded-xl">
                             <a href="/enamad-verify" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="static/assets/images/namad/enamad.png" class="h-25" alt="اینماد"
+                                <img src={%static "assets/images/namad/enamad.png"%} class="h-25" alt="اینماد"
                                     itemprop="contentUrl">
                                 <meta itemprop="license" content="https://enamad.ir">
                             </a>
@@ -2269,7 +2268,7 @@
             <div class="py-3 last:mb-35" itemscope itemtype="http://schema.org/Product">
                 <div class="flex flex-wrap items-center">
                     <div class="text-right w-1/3">
-                        <img class="max-w-full" src="static/assets/images/product/wach-1.png"
+                        <img class="max-w-full" src={%static "assets/images/product/wach-1.png"%}
                             alt="ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve" itemprop="image"
                             loading="lazy">
                     </div>
@@ -2526,9 +2525,9 @@
     </nav>
     <!-- ================= end nav mobile menu ================= -->
 
-    <script src="assets/js/plugin/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/dependencies/swiper-script.js"></script>
-    <script src="assets/js/dependencies/app.js"></script>
+    <script src={%static "assets/js/plugin/swiper/swiper-bundle.min.js"%}></script>
+    <script src={%static "assets/js/dependencies/swiper-script.js"%}></script>
+    <script src={%static "assets/js/dependencies/app.js"%}></script>
 </body>
 
 </html>
