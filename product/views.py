@@ -5,16 +5,19 @@ def index(request):
     return render(request, 'index.html')
 
 def about_us(request):
-    return render(request, "about-us.html")
+    return render(request, "product/about-us.html")
 
 def contact_us(request):
-    return render(request, "contact-us.html")
+    return render(request, "product/contact-us.html")
 
 def faq(request):
-    return render(request, "faq.html")
+    return render(request, "product/faq.html")
 
 def privacy_policy(request):
-    return render(request, "privacy-policy.html")
+    return render(request, "product/privacy-policy.html")
 
 def terms_and_rules(request):
-    return render(request, "terms-and-rules.html")
+    return render(request, "product/terms-and-rules.html")
+
+def shop(request):
+    return render(request, "product/shop.html")
