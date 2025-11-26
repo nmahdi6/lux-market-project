@@ -25,3 +25,7 @@ def shop(request):
 def product_detail(request):
     return render(request, "product/product.html")
 
+def compare(request):
+    return render(request, "product/compare.html")
+
+
