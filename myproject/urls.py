@@ -11,9 +11,12 @@ admin.site.index_title = _("خوش آمدید")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('product.urls', namespace='product')),
 
-    # path('api/', include('...')),
+    # صفحات عمومی
+    path('', include('core.urls', namespace='core')),
+
+    # محصول
+    path('product/', include('product.urls', namespace='product')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
