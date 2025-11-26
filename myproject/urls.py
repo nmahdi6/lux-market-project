@@ -15,6 +15,9 @@ urlpatterns = [
     # صفحات عمومی
     path('', include('core.urls', namespace='core')),
 
+
+    path('', include('customer.urls', namespace='customer')),
+
     # محصول
     path('product/', include('product.urls', namespace='product')),
 ]
