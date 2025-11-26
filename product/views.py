@@ -21,3 +21,7 @@ def terms_and_rules(request):
 
 def shop(request):
     return render(request, "product/shop.html")
+
+def product_detail(request):
+    return render(request, "product/product.html")
+

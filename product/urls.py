@@ -12,4 +12,5 @@ urlpatterns = [
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
     path('terms-and-rules/', views.terms_and_rules, name='terms_and_rules'),
     path('shop/', views.shop, name='shop'),
+    path('product/', views.product_detail, name='product_detail'),
 ]
