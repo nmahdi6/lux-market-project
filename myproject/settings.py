@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     
 
     "review", 
+    "core", 
     "customer",
     "order",
     "payment",

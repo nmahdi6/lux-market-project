@@ -15,7 +15,7 @@ urlpatterns = [
     # صفحات عمومی
     path('', include('core.urls', namespace='core')),
 
-
+    # صفحات احراز هویت
     path('', include('customer.urls', namespace='customer')),
 
     # محصول
