@@ -18,6 +18,9 @@ urlpatterns = [
     # صفحات احراز هویت
     path('', include('customer.urls', namespace='customer')),
 
+    # پنل کاربر
+    path("account/", include(("account.urls"), namespace='account')),
+
     # محصول
     path('product/', include('product.urls', namespace='product')),
 ]
