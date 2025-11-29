@@ -8,3 +8,9 @@ def compare(request):
 
 def product_detail(request, id):
     return render(request, "product/product.html")
+
+def blog(request):
+    return render(request, "product/blog.html")
+
+def blog_single(request):
+    return render(request, "product/blog-single.html")

@@ -1,0 +1,752 @@
+{% load static %}
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<head>
+    <title>قالب فرشگاهی لوکس مارکت</title>
+    {% include 'base/header.html' %}
+</head>
+
+<body
+    class="bg-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark transition-colors duration-200">
+    <!-- ================= start header ================= -->
+    {% include 'base/appbar.html' %}
+
+    <!-- ================= end header ================= -->
+
+    <!-- ================= start content section ================= -->
+    <section class="py-5">
+        <div class="container">
+            <!--Original content-->
+            <main class="container !px-0 my-10">
+                <div class="flex flex-col xl:flex-row gap-4">
+                    <!-- Articles -->
+                    <div class="xl:w-3/4 bg-white rounded-xl shadow-md overflow-hidden">
+                        <!--The main image of the article-->
+                        <img src={%static "assets/images/blog/cover.jpg"%} alt="گوشی‌های هوشمند"
+                            class="w-full h-64 md:h-96 object-cover">
+
+                        <!--Header of the article-->
+                        <div class="p-6 md:p-8 dark:bg-card-dark">
+                            <div class="flex flex-wrap items-center justify-between mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <span
+                                        class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded">تکنولوژی</span>
+                                    <span class="text-sm text-gray-500">15 خرداد 1402</span>
+                                    <span class="text-sm text-gray-500">•</span>
+                                    <span class="text-sm text-gray-500">5 دقیقه مطالعه</span>
+                                </div>
+                                <div class="flex items-center space-x-2 mt-2 md:mt-0">
+                                    <button class="text-gray-400 hover:text-red-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                        </svg>
+                                    </button>
+                                    <button class="text-gray-400 hover:text-blue-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 dark:text-white">راهنمای خرید
+                                بهترین گوشی هوشمند در سال 1402</h1>
+
+                            <!--Author information-->
+                            <div class="flex items-center mb-8 pb-6 border-b border-gray-200">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="نویسنده"
+                                    class="w-12 h-12 rounded-full object-cover">
+                                <div class="mr-4">
+                                    <h4 class="font-medium text-gray-800 dark:text-gray-300">محمد رضایی</h4>
+                                    <p class="text-sm text-gray-500">کارشناس فناوری اطلاعات</p>
+                                </div>
+                            </div>
+
+                            <!--Content of the article-->
+                            <div class="article-content text-gray-700 dark:text-gray-300">
+                                <p>در دنیای امروز که گوشی‌های هوشمند به بخش جدایی‌ناپذیر زندگی ما تبدیل شده‌اند، انتخاب
+                                    یک مدل مناسب می‌تواند چالش برانگیز باشد. در این مقاله به بررسی معیارهای انتخاب یک
+                                    گوشی هوشمند مناسب و معرفی بهترین مدل‌های سال 1402 می‌پردازیم.</p>
+
+                                <h2>معیارهای انتخاب گوشی هوشمند</h2>
+
+                                <p>قبل از پرداختن به مدل‌های خاص، بهتر است معیارهای کلی برای انتخاب یک گوشی مناسب را
+                                    بررسی کنیم:</p>
+
+                                <ul>
+                                    <li><strong>بودجه:</strong> محدوده قیمتی که برای خرید در نظر دارید مهمترین عامل است.
+                                    </li>
+                                    <li><strong>سیستم عامل:</strong> انتخاب بین اندروید و iOS بستگی به ترجیحات و نیازهای
+                                        شما دارد.</li>
+                                    <li><strong>کارایی پردازنده:</strong> برای کاربری سنگین مانند گیمینگ یا ویرایش ویدئو
+                                        اهمیت دارد.</li>
+                                    <li><strong>کیفیت دوربین:</strong> برای عکاسان حرفه‌ای یا علاقه‌مندان به شبکه‌های
+                                        اجتماعی حیاتی است.</li>
+                                    <li><strong>طول عمر باتری:</strong> برای کاربرانی که زیاد از گوشی استفاده می‌کنند
+                                        بسیار مهم است.</li>
+                                </ul>
+
+                                <h2>بهترین گوشی‌های اندرویدی 1402</h2>
+
+                                <p>در رده‌بندی گوشی‌های اندرویدی سال جاری، مدل‌های زیر به عنوان بهترین‌ها شناخته
+                                    شده‌اند:</p>
+
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mt-6 mb-3">1. سامسونگ
+                                    گلکسی S23 اولترا</h3>
+
+                                <p>این گوشی با پردازنده قدرتمند اسنپدراگون 8 نسل 2، صفحه نمایش 6.8 اینچی داینامیک AMOLED
+                                    2X و سیستم چهار دوربین 200 مگاپیکسلی، یکی از بهترین انتخاب‌ها برای کاربران حرفه‌ای
+                                    است.</p>
+
+                                <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="سامسونگ گلکسی S23 اولترا" class="w-full h-auto my-6 rounded-lg">
+
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mt-6 mb-3">2. شیائومی 13
+                                    پرو</h3>
+
+                                <p>با قیمتی مناسب‌تر نسبت به رقبای پرچمدار، این مدل شیائومی پردازنده قدرتمند، صفحه نمایش
+                                    120 هرتز و سیستم سه دوربین لایکا را ارائه می‌دهد.</p>
+
+                                <h2>بهترین آیفون‌های 1402</h2>
+
+                                <p>برای طرفداران اپل، انتخاب‌های سال جاری شامل موارد زیر است:</p>
+
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mt-6 mb-3">1. آیفون 14 پرو
+                                    مکس</h3>
+
+                                <p>با تراشه A16 بایونیک، صفحه نمایش همیشه روشن و سیستم دوربین پیشرفته، این مدل همچنان
+                                    یکی از قدرتمندترین گوشی‌های بازار محسوب می‌شود.</p>
+
+                                <img src="https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="آیفون 14 پرو مکس" class="w-full h-auto my-6 rounded-lg">
+
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mt-6 mb-3">2. آیفون SE
+                                    2022</h3>
+
+                                <p>گزینه‌ای مقرون‌به‌صرفه با تراشه A15 همانند آیفون 13، اما با طراحی قدیمی‌تر و صفحه
+                                    نمایش کوچک‌تر.</p>
+
+                                <h2 class="dark:text-gray-200">نتیجه‌گیری</h2>
+
+                                <p>انتخاب بهترین گوشی هوشمند به نیازها و بودجه شما بستگی دارد. مدل‌های معرفی شده در این
+                                    مقاله هر کدام در رده خود بهترین عملکرد را ارائه می‌دهند. پیشنهاد می‌کنیم قبل از
+                                    خرید، حتما گوشی مورد نظر را از نزدیک بررسی کنید.</p>
+                            </div>
+
+                            <!--Article tags-->
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="#"
+                                        class="bg-gray-100 dark:bg-primary-dark dark:hover:bg-primary-dark/70 dark:text-white hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm transition duration-300">گوشی
+                                        هوشمند</a>
+                                    <a href="#"
+                                        class="bg-gray-100 dark:bg-primary-dark dark:hover:bg-primary-dark/70 dark:text-white hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm transition duration-300">راهنمای
+                                        خرید</a>
+                                    <a href="#"
+                                        class="bg-gray-100 dark:bg-primary-dark dark:hover:bg-primary-dark/70 dark:text-white hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm transition duration-300">تکنولوژی</a>
+                                    <a href="#"
+                                        class="bg-gray-100 dark:bg-primary-dark dark:hover:bg-primary-dark/70 dark:text-white hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm transition duration-300">اندروید</a>
+                                    <a href="#"
+                                        class="bg-gray-100 dark:bg-primary-dark dark:hover:bg-primary-dark/70 dark:text-white hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm transition duration-300">آیفون</a>
+                                </div>
+                            </div>
+
+                            <!--Sharing-->
+                            <div class="mt-8 dark:bg-gray-900 bg-gray-50 p-4 rounded-lg">
+                                <h3 class="text-lg font-medium text-gray-800 mb-3 dark:text-white">این مقاله را با
+                                    دوستان خود به اشتراک بگذارید</h3>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white p-2 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white p-2 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- the author -->
+                            <div class="mt-8 bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="نویسنده"
+                                        class="w-16 h-16 rounded-full object-cover">
+                                    <div class="mr-4">
+                                        <h4 class="text-lg font-bold text-gray-800 dark:text-gray-300">محمد رضایی</h4>
+                                        <p class="text-gray-600 mb-2 dark:text-gray-400">کارشناس فناوری اطلاعات با 10
+                                            سال سابقه در حوزه موبایل و گجت‌ها</p>
+                                        <div class="flex space-x-3">
+                                            <a href="#" class="text-gray-500 dark:text-gray-300 hover:text-blue-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="text-gray-500 dark:text-gray-300 hover:text-blue-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="text-gray-500 dark:text-gray-300 hover:text-gray-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-gray-700 dark:text-gray-400">محمد رضایی متخصص حوزه فناوری و نویسنده
+                                    دائمی وبلاگ فروشگاه ما است. او با بیش از 10 سال سابقه در بررسی و تحلیل گجت‌های
+                                    دیجیتال، راهنمای‌های تخصصی برای خریداران تهیه می‌کند.</p>
+                            </div>
+
+                            <!--Related articles-->
+                            <div class="mt-12">
+                                <h3
+                                    class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200 dark:text-gray-300">
+                                    مقالات مرتبط</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <a href="#" class="flex items-start space-x-3 group">
+                                        <img src={%static "assets/images/blog/blog-5.jpg"%} alt="مقاله مرتبط"
+                                            class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
+                                        <div>
+                                            <h4
+                                                class="font-medium text-gray-800 group-hover:text-primary-600 dark:text-gray-300">
+                                                مقایسه پردازنده‌های موبایل در سال 1402</h4>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400">12 اردیبهشت 1402 • 4
+                                                دقیقه</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start space-x-3 group">
+                                        <img src={%static "assets/images/blog/blog-3.jpg"%} alt="مقاله مرتبط"
+                                            class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
+                                        <div>
+                                            <h4
+                                                class="font-medium text-gray-800 group-hover:text-primary-600 dark:text-gray-300">
+                                                راهنمای خرید تبلت برای دانشجویان</h4>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400">5 اردیبهشت 1402 • 6
+                                                دقیقه</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Comments -->
+                            <div class="mt-12">
+                                <h3
+                                    class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200 dark:text-gray-300">
+                                    نظرات کاربران (4)</h3>
+
+                                <form class="mb-8">
+                                    <textarea placeholder="نظر خود را بنویسید..."
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                                        rows="3"></textarea>
+                                    <button type="submit"
+                                        class="mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-6 rounded-lg transition duration-300">ارسال
+                                        نظر</button>
+                                </form>
+
+                                <div class="space-y-6">
+                                    <!--Comment 1-->
+                                    <div class="flex items-start space-x-3">
+                                        <img src={%static "assets/images/user/profile-img.jpg"%} alt="کاربر"
+                                            class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                                        <div>
+                                            <div class="bg-gray-50 dark:bg-zinc-900 p-4 rounded-lg">
+                                                <div class="flex justify-between items-start">
+                                                    <h4 class="font-medium text-gray-800 dark:text-gray-300">نازنین
+                                                        محمدی</h4>
+                                                    <span class="text-xs text-gray-500 dark:text-gray-300">2 روز
+                                                        پیش</span>
+                                                </div>
+                                                <p class="mt-1 text-gray-700 dark:text-gray-300">مقاله بسیار مفیدی بود.
+                                                    ممنون از راهنمایی‌های تخصصی‌تون. من خودم گلکسی S23 دارم و واقعا
+                                                    راضیم.</p>
+                                            </div>
+                                            <div class="mt-2 flex space-x-4 text-sm">
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400">پاسخ</button>
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400">پسندیدم
+                                                    (5)</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Comment 2-->
+                                    <div class="flex items-start space-x-3">
+                                        <img src={%static "assets/images/user/profile-img-2.jpg"%} alt="کاربر"
+                                            class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                                        <div>
+                                            <div class="bg-gray-50 dark:bg-zinc-900 p-4 rounded-lg">
+                                                <div class="flex justify-between items-start">
+                                                    <h4 class="font-medium text-gray-800 dark:text-gray-300">امیرحسین
+                                                        رضایی</h4>
+                                                    <span class="text-xs text-gray-500 dark:text-gray-300">1 هفته
+                                                        پیش</span>
+                                                </div>
+                                                <p class="mt-1 text-gray-700 dark:text-gray-300">آیا مدل‌های چینی مثل
+                                                    شیائومی و اوپو هم گزینه مناسبی هستند؟ به نظر من کیفیت ساخت این
+                                                    برندها در سال‌های اخیر خیلی بهتر شده.</p>
+                                            </div>
+                                            <div class="mt-2 flex space-x-4 text-sm">
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400">پاسخ</button>
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400">پسندیدم
+                                                    (2)</button>
+                                            </div>
+
+                                            <!--Reply to comment 2-->
+                                            <div class="mt-4 flex items-start space-x-3 pr-4">
+                                                <img src={%static "assets/images/user/user.png"%} alt="نویسنده"
+                                                    class="w-8 h-8 rounded-full object-cover flex-shrink-0">
+                                                <div>
+                                                    <div class="bg-primary-50 dark:bg-zinc-900 p-3 rounded-lg">
+                                                        <div class="flex justify-between items-start">
+                                                            <h4 class="font-medium text-gray-800  dark:text-gray-300">
+                                                                محمد رضایی (نویسنده)</h4>
+                                                            <span class="text-xs text-gray-500 dark:text-gray-300">5 روز
+                                                                پیش</span>
+                                                        </div>
+                                                        <p class="mt-1 text-gray-700 dark:text-gray-300">بله کاملا درست
+                                                            می‌فرمایید. برندهای چینی در سال‌های اخیر پیشرفت چشمگیری
+                                                            داشته‌اند. به خصوص در زمینه دوربین و باتری عملکرد بسیار خوبی
+                                                            ارائه می‌دهند.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- sidebar -->
+                    <aside class="xl:w-1/4 relative">
+                        <div class="space-y-8 sticky top-0">
+                            <!-- Categories -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-colors duration-200">
+                                <h3
+                                    class="font-bold dark:text-white text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">
+                                    دسته‌بندی‌ها</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#"
+                                            class="flex justify-between text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                                            <span>تکنولوژی</span>
+                                            <span
+                                                class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full">12</span>
+                                        </a></li>
+                                    <li><a href="#"
+                                            class="flex justify-between text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                                            <span>خرید اینترنتی</span>
+                                            <span
+                                                class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full">8</span>
+                                        </a></li>
+                                    <li><a href="#"
+                                            class="flex justify-between text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                                            <span>گجت‌ها</span>
+                                            <span
+                                                class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full">15</span>
+                                        </a></li>
+                                    <li><a href="#"
+                                            class="flex justify-between text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                                            <span>صوت و تصویر</span>
+                                            <span
+                                                class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full">7</span>
+                                        </a></li>
+                                    <li><a href="#"
+                                            class="flex justify-between text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                                            <span>نقد و بررسی</span>
+                                            <span
+                                                class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full">9</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                            <!--Popular articles-->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-colors duration-200">
+                                <h3
+                                    class="font-bold dark:text-white text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">
+                                    مقالات پرطرفدار</h3>
+                                <div class="space-y-4">
+                                    <a href="#" class="flex items-start space-x-3 group">
+                                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                            alt="مقاله پرطرفدار" class="w-16 h-16 object-cover rounded-lg">
+                                        <div>
+                                            <h4
+                                                class="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                                                چگونه لپ‌تاپ مناسب برای کارهای گرافیکی انتخاب کنیم؟</h4>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400">25 اردیبهشت
+                                                1402</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start space-x-3 group">
+                                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                            alt="مقاله پرطرفدار" class="w-16 h-16 object-cover rounded-lg">
+                                        <div>
+                                            <h4
+                                                class="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                                                ۱۰ کفش ورزشی برتر سال برای دویدن</h4>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400">18 اردیبهشت
+                                                1402</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start space-x-3 group">
+                                        <img src="https://images.unsplash.com/photo-1525904097878-94fb15835963?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                            alt="مقاله پرطرفدار" class="w-16 h-16 object-cover rounded-lg">
+                                        <div>
+                                            <h4
+                                                class="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                                                راهنمای خرید عینک آفتابی مناسب برای فصل تابستان</h4>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400">10 اردیبهشت
+                                                1402</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- newsletter -->
+                            <div
+                                class="bg-primary-50 dark:bg-primary-900/20 p-6 rounded-xl border border-primary-100 dark:border-primary-800 transition-colors duration-200">
+                                <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-3">عضویت در خبرنامه</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">با عضویت در خبرنامه از آخرین
+                                    مقالات و تخفیف‌های ویژه مطلع شوید.</p>
+                                <form class="space-y-3">
+                                    <input type="email" placeholder="آدرس ایمیل شما"
+                                        class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white">
+                                    <button type="submit"
+                                        class="w-full bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white py-2 px-4 rounded-lg transition duration-300">عضویت</button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </main>
+
+        </div>
+    </section>
+    <!-- ================= end content section ================= -->
+
+    <!-- ================= start footer section ================= -->
+    {% include 'base/footer.html' %}
+
+    <!-- ================= end footer section ================= -->
+
+    <!-- ================= start cart offcanvas ================= -->
+    <!-- Offcanvas Cart -->
+    <div id="offcanvas-left"
+        class="offcanvas invisible dark:bg-background-dark dark:text-white fixed top-0 left-0 sm:w-100 w-[80%] h-full bg-white shadow-lg transform -translate-x-full transition-transform opacity-0 z-50"
+        role="dialog" aria-labelledby="cart-title" aria-modal="true">
+        <!-- Header -->
+        <header class="border-b p-3 flex items-center justify-between border-gray-400">
+            <h2 id="cart-title" class="font-bold text-base">سبد خرید شما</h2>
+            <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن سبد خرید">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </header>
+        <!-- Cart Items -->
+        <main class="relative space-y-4 divide-y divide-gray-200 p-3 overflow-y-scroll h-full">
+            <!-- Product 1 -->
+            <div class="py-3 last:mb-35" itemscope itemtype="http://schema.org/Product">
+                <div class="flex flex-wrap items-center">
+                    <div class="text-right w-1/3">
+                        <img class="max-w-full" src={%static "assets/images/product/wach-1.png"%}
+                            alt="ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve" itemprop="image"
+                            loading="lazy">
+                    </div>
+                    <div class="w-2/3 space-y-4">
+                        <h3 class="font-bold leading-7" itemprop="name">
+                            ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve
+                        </h3>
+                        <div class="flex items-center justify-between">
+                            <del class="text-rose-600 dark:text-white line-through" itemprop="priceCurrency"
+                                content="IRR">
+                                <span itemprop="highPrice">5,000,000</span>
+                            </del>
+                            <ins class="no-underline text-xl text-green-600 font-bold" itemprop="price"
+                                content="2500000">
+                                2,500,000 <span class="text-sm font-normal text-gray-700 dark:text-white">تومان</span>
+                            </ins>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span itemprop="quantity">تعداد: 3</span>
+                            <a href="#"
+                                class="bg-red-100 dark:border dark:bg-transparent dark:text-white text-red-950 p-2 rounded-lg"
+                                role="button" aria-label="حذف محصول از سبد خرید">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="p-2 absolute bottom-0 right-0 left-0 bg-white dark:border-0  dark:bg-background-dark border border-gray-400">
+            <div class="flex items-center justify-between">
+                <div class="space-y-2">
+                    <span class="inline-block text-lg">جمع کل</span>
+                    <h3 class="font-bold text-xl" itemprop="totalPrice" content="11000000">
+                        11,000,000 تومان
+                    </h3>
+                </div>
+                <div class="text-end">
+                    <a href="/checkout" class="bg-primary-grad hover:bg-primary-600 text-white py-2 px-4 rounded-lg"
+                        role="button" aria-label="تکمیل فرایند خرید">
+                        تکمیل خرید
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay transition fixed inset-0 z-40 bg-black/70 hidden" onclick="closeOffcanvas()" role="presentation"
+        aria-hidden="true"></div>
+    <!-- ================= end cart offcanvas ================= -->
+
+    <!-- ================= start filter modal ================= -->
+    <div id="filterModal" role="dialog" aria-modal="true" aria-labelledby="filterModalTitle" data-modal-id="filterModal"
+        class="modal hidden fixed inset-0 z-50 overflow-auto backdrop-blur bg-opacity-50">
+        <div class="relative p-4 w-full max-w-md m-auto flex items-center min-h-screen">
+            <div class="relative dark:bg-background-dark border-gray-300 border bg-white rounded-lg shadow-lg w-full"
+                itemscope itemtype="http://schema.org/Place">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-4 dark:border-b-white border-b">
+                    <h3 id="filterModalTitle" class="text-xl  dark:text-white" itemprop="name">فیلتر بر اساس شهر</h3>
+                    <button data-modal-close class="text-gray-500 hover:text-gray-700 cursor-pointer text-3xl"
+                        aria-label="بستن پنجره فیلتر">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Content -->
+                <div class="p-4">
+                    <!-- Cities Data -->
+                    <meta itemprop="address"
+                        content="تهران,مشهد,اصفهان,تبریز,شیراز,اهواز,قم,کرج,کرمانشاه,ارومیه,زاهدان,رشت,همدان,یزد,اردبیل,بندرعباس,کیش,ساری,گرگان,بجنورد">
+                    <div id="citySelector"
+                        data-cities="تهران,مشهد,اصفهان,تبریز,شیراز,اهواز,قم,کرج,کرمانشاه,ارومیه,زاهدان,رشت,همدان,یزد,اردبیل,بندرعباس,کیش,ساری,گرگان,بجنورد">
+                    </div>
+                    <!-- Search Form -->
+                    <form id="searchForm" class="mb-2" role="search">
+                        <label for="search" class="mb-2 block text-sm font-medium dark:text-white text-gray-900">
+                            جستجوی شهر
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="search" id="search"
+                                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary dark:bg-background-dark dark:text-white"
+                                placeholder="نام شهر را وارد کنید" aria-describedby="searchDescription" required>
+                        </div>
+                        <p id="searchDescription" class="sr-only">برای جستجو در بین شهرهای موجود تایپ کنید</p>
+                    </form>
+                    <!-- Selected Cities -->
+                    <div id="selectedCities" class="flex my-3 flex-wrap gap-2" role="status" aria-live="polite"></div>
+                    <!-- Cities List -->
+                    <ul id="cityList"
+                        class="w-full h-80 overflow-y-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                        role="listbox" aria-labelledby="filterModalTitle">
+                        <template id="cityTemplate">
+                            <li role="option" class="p-3 border-b cursor-pointer hover:bg-gray-100" tabindex="0"
+                                itemprop="containsPlace" itemscope itemtype="http://schema.org/City">
+                                <span itemprop="name"></span>
+                            </li>
+                        </template>
+                    </ul>
+                    <!-- Filter Button -->
+                    <div class="mt-4">
+                        <button id="filterButton"
+                            class="w-full px-4 py-3 cursor-pointer bg-primary text-white rounded-lg hover:bg-primary-600 transition-colors"
+                            aria-label="اعمال فیلتر بر اساس شهرهای انتخاب شده">
+                            فیلتر کن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= end filter modal ================= -->
+
+    <!-- ================= start responsive menu offcanvas ================= -->
+    <div id="offcanvas-right"
+        class="offcanvas invisible overflow-y-scroll fixed top-0 right-0 sm:w-100 w-[80%] h-full bg-white dark:bg-background-dark shadow-lg transform -translate-x-full transition-transform opacity-0 z-50"
+        role="navigation" aria-labelledby="store-menu-title" aria-modal="true">
+        <div class="border-b p-3 flex items-center justify-between border-gray-400">
+            <h2 id="store-menu-title" class="font-bold text-base dark:text-white">فروشگاه لوکس مارکت</h2>
+            <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن منوی فروشگاه">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="relative space-y-4 divide-y divide-gray-200 p-3 overflow-y-scroll h-full"
+            style="padding-left: 0!important;" aria-label="منوی اصلی">
+            <ul class="space-y-2 text-sm">
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope
+                    itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="/" class="block" itemprop="url">صفحه اصلی</a>
+                </li>
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope
+                    itemtype="http://schema.org/SiteNavigationElement">
+                    <button class="flex justify-between w-full text-right" aria-expanded="false" aria-controls="menu1"
+                        id="menu1-button" onclick="toggleDropdown('menu1')">
+                        <span itemprop="name">گوشی موبایل</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform"
+                            id="icon-menu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul id="menu1" class="hidden bg-gray-200 dark:bg-background-dark dark:text-white" role="menu"
+                        aria-labelledby="menu1-button">
+                        <li class="border-b border-gray-300" itemscope
+                            itemtype="http://schema.org/SiteNavigationElement">
+                            <button class="flex justify-between w-full px-6 py-2 text-right" aria-expanded="false"
+                                aria-controls="submenu1" id="submenu1-button" onclick="toggleDropdown('submenu1')">
+                                <span itemprop="name">برند</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform"
+                                    id="icon-submenu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <ul id="submenu1" class="hidden bg-gray-100 dark:bg-zinc-500 dark:text-gray-200" role="menu"
+                                aria-labelledby="submenu1-button" itemscope itemtype="http://schema.org/Brand">
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">سامسونگ</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">اپل</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">شیائومی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">هواوی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">نوکیا</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">ال جی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">سونی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">گوگل</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">وان پلاس</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">موتورولا</li>
+                            </ul>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200" itemscope
+                            itemtype="http://schema.org/ProductCategory">
+                            <a href="/category/flagship" class="block" itemprop="name">پرچمدار</a>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200" itemscope
+                            itemtype="http://schema.org/ProductCategory">
+                            <a href="/category/mid-range" class="block" itemprop="name">میان رده</a>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200" itemscope
+                            itemtype="http://schema.org/ProductCategory">
+                            <a href="/category/budget" class="block" itemprop="name">اقتصادی</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope
+                    itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="/pages" class="block" itemprop="url">صفحات</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="overlay z-40 transition fixed inset-0 bg-black/70 hidden" onclick="closeOffcanvas()" role="presentation"
+        aria-hidden="true"></div>
+    <!-- ================= end responsive menu offcanvas ================= -->
+
+    <!-- ================= start nav mobile menu ================= -->
+    <nav
+        class="fixed shadow-xl border-t-zinc-300 dark:border-0 bottom-0 z-20 lg:hidden left-0 right-0 dark:bg-background-dark dark:text-white bg-white border-t border-gray-200">
+        <div class="flex justify-around items-center flex-row-reverse py-3 px-4">
+            <!-- Home -->
+            <a href="#" class="flex flex-col items-center text-primary space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <span class="text-xs font-bold">خانه</span>
+            </a>
+            <!-- cart -->
+            <a href="#" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+                <span class="text-xs dark:text-white">سبد خرید</span>
+            </a>
+            <!-- Profile -->
+            <a href="#" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                <span class="text-xs dark:text-white">پنل کاربری</span>
+            </a>
+            <!-- Top -->
+            <a href="#" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+                <span class="text-xs dark:text-white">رفتن به بالا</span>
+            </a>
+        </div>
+    </nav>
+    <!-- ================= end nav mobile menu ================= -->
+
+    {% include 'base/nav_mobile_menu.html' %}
+
+</body>
+
+</html>
