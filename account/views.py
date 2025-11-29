@@ -5,3 +5,6 @@ def dashboard(request):
 
 def orders(request):
     return render(request, 'account/orders/user-panel-order.html')
+
+def addresses(request):
+    return render(request, 'account/addresses/user-panel-addresses.html')
