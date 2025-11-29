@@ -10,4 +10,5 @@ urlpatterns = [
     path('wallet/', views.wallet, name='wallet'),
     path('tickets/', views.ticket, name='ticket'),
     path('ticket-form/', views.ticket_form, name='ticket-form'),
+    path('ticket-chat/', views.ticket_chat, name='ticket-chat'),
 ]

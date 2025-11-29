@@ -17,3 +17,6 @@ def ticket(request):
 
 def ticket_form(request):
     return render(request, 'account/tickets/user-panel-ticket-form.html')
+
+def ticket_chat(request):
+    return render(request, 'account/tickets/user-panel-ticket-chat.html')
