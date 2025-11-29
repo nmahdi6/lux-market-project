@@ -5,4 +5,5 @@ app_name = 'account'
 
 urlpatterns = [
     path('', views.dashboard, name='dashboard'),
+    path('orders/', views.orders, name='orders'),
 ]
