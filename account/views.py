@@ -11,3 +11,6 @@ def addresses(request):
 
 def wallet(request):
     return render(request, 'account/wallet/user-panel-wallet.html')
+
+def ticket(request):
+    return render(request, 'account/tickets/user-panel-ticket.html')
