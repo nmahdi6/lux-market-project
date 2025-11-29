@@ -8,3 +8,6 @@ def orders(request):
 
 def addresses(request):
     return render(request, 'account/addresses/user-panel-addresses.html')
+
+def wallet(request):
+    return render(request, 'account/wallet/user-panel-wallet.html')
