@@ -14,3 +14,6 @@ def wallet(request):
 
 def ticket(request):
     return render(request, 'account/tickets/user-panel-ticket.html')
+
+def ticket_form(request):
+    return render(request, 'account/tickets/user-panel-ticket-form.html')
