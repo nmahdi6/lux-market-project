@@ -21,6 +21,9 @@ urlpatterns = [
     # پنل کاربر
     path("account/", include(("account.urls"), namespace='account')),
 
+    # پنل فروشنده
+    path("seller/", include(("seller.urls"), namespace='seller')),
+
     # محصول
     path('product/', include('product.urls', namespace='product')),
 ]
