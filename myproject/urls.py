@@ -26,6 +26,9 @@ urlpatterns = [
 
     # محصول
     path('product/', include('product.urls', namespace='product')),
+
+    # 
+    path('order/', include('order.urls', namespace='order')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
