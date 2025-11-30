@@ -17,3 +17,6 @@ def success_payment(request):
 
 def fail_payment(request):
     return render(request, "order/fail-payment.html") 
+
+def return_procedure(request):
+    return render(request, "order/return-procedure.html") 

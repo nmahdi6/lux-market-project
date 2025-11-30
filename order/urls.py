@@ -10,4 +10,5 @@ urlpatterns = [
     path('payment/', views.payment, name='payment'),
     path('success-payment/', views.success_payment, name='success-payment'),
     path('fail-payment/', views.fail_payment, name='fail-payment'),
+    path('return-procedure/', views.return_procedure, name='return-procedure'),
 ]
