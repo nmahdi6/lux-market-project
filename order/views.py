@@ -11,3 +11,9 @@ def checkout(request):
 
 def payment(request):
     return render(request, "order/payment.html") 
+
+def success_payment(request):
+    return render(request, "order/success-payment.html") 
+
+def fail_payment(request):
+    return render(request, "order/fail-payment.html") 
