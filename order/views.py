@@ -5,3 +5,6 @@ def cart(request):
 
 def cart_empty(request):
     return render(request, "order/cart-empty.html") 
+
+def checkout(request):
+    return render(request, "order/checkout.html") 

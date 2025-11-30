@@ -1,0 +1,702 @@
+{% load static %}
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<head>
+    <title>قالب فرشگاهی آرینو</title>    
+    {% include 'base/header.html' %}
+</head>
+
+<body
+    class="bg-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark transition-colors duration-200">
+    <!-- ================= start header ================= -->
+    {% include 'base/appbar.html' %}
+
+    <!-- ================= end header ================= -->
+
+    <!-- ================= start content section ================= -->
+    <section class="py-5">
+        <div class="container">
+
+            <!-- stepper -->
+            <ol
+                class="flex items-center w-full bg-white rounded-lg drop-shadow-lg border border-gray-300 mb-4 p-3 space-x-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base dark:bg-gray-800  sm:p-4 sm:space-x-4 rtl:space-x-reverse">
+                <li class="flex items-center">
+                    <span class="flex items-center justify-center w-5 h-5 me-2 text-xs border rounded-full shrink-0 ">
+                        1
+                    </span>
+                    جزئیات <span class="hidden sm:inline-flex sm:ms-2">سبد خرید</span>
+                    <svg class="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m7 9 4-4-4-4M1 9l4-4-4-4" />
+                    </svg>
+                </li>
+                <li class="flex font-bold text-primary items-center">
+                    <span
+                        class="flex items-center justify-center w-5 h-5 me-2 text-xs border rounded-full shrink-0 dark:border-gray-400">
+                        2
+                    </span>
+                    جزئیات <span class="hidden sm:inline-flex sm:ms-2">سفارش</span>
+                    <svg class="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m7 9 4-4-4-4M1 9l4-4-4-4" />
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <span
+                        class="flex me-2 items-center justify-center w-5 h-5 ms-2 text-xs border rounded-full shrink-0 dark:border-gray-400">
+                        3
+                    </span>
+                    جزئیات <span class="hidden sm:inline-flex sm:ms-2">پرداخت</span>
+                </li>
+            </ol>
+
+            <!-- alert -->
+            <div class="flex drop-shadow-sm border border-gray-200 space-x-3 items-center p-6 mb-4 text-sm text-yellow-800 rounded-lg bg-orange-50 dark:bg-gray-800 dark:text-white"
+                role="alert">
+                <svg class="shrink-0 block size-8 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div class="flex items-center space-x-3">
+                    <span class="block">اگه کد تخفیف داری همین الان واردش کن</span>
+                    <a href="" data-modal-target="discountModal"
+                        class="modal-trigger bg-primary-grad text-white py-1 px-5 ms-3 cursor-pointer rounded-lg flex items-center">
+                        وارد کردن
+                    </a>
+                </div>
+            </div>
+
+            <!-- content -->
+            <div class="grid gap-4 grid-cols-4 relative">
+                <!-- form -->
+                <div class="xl:col-span-3 col-span-4 w-full">
+                    <!-- shipping -->
+                    <div class="space-y-4">
+                        <!-- Header and order information -->
+                        <div
+                            class="dark:bg-background-dark dark:text-white bg-white rounded-lg drop-shadow-lg border-gray-300 border-1 p-4">
+                            <h1
+                                class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">
+                                تکمیل اطلاعات ارسال</h1>
+
+                            <div class="border-b border-gray-200 pb-4 mb-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h2 class=" text-gray-700 dark:text-white">آدرس تحویل سفارش</h2>
+                                    <button
+                                        class="text-primary-600 dark:text-white hover:text-primary-800 dark:hover:text-white text-sm flex items-center">
+                                        تغییر آدرس
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="text-gray-600 dark:text-white flex flex-col space-y-3 mt-3 text-sm">
+                                    <span>تهران، خیابان انقلاب پلاک ۱۲، واحد ۳</span>
+                                    <span>کد پستی: ۱۲۳۴۵۶۷۸۹۰</span>
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class=" text-gray-700 mb-2 dark:text-white">اطلاعات کاربر</h2>
+                                <p class="text-gray-600 text-sm dark:text-white">
+                                    محمد رضایی - ۰۹۱۲۳۴۵۶۷۸۹
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Select the shipping method -->
+                        <div
+                            class="dark:bg-background-dark dark:text-white bg-white rounded-lg drop-shadow-lg border-gray-300 border-1 p-4">
+                            <h2
+                                class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">
+                                روش ارسال را انتخاب کنید</h2>
+
+                            <div class="space-y-4">
+                                <div
+                                    class="border border-gray-200 rounded-lg p-4 hover:border-primary-500 transition-all">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <h3 class="font-medium text-gray-700 dark:text-white">ارسال عادی</h3>
+                                            <p class="text-sm text-gray-500 mt-1 dark:text-white">تحویل درب منزل یا محل
+                                                کار</p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="text-green-500 text-sm ml-2 dark:text-white">موجود</span>
+                                            <input type="radio" name="delivery" checked=""
+                                                class="h-5 dark:text-white w-5 text-primary-600 delivery-method"
+                                                data-type="normal">
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 pt-3 border-t border-gray-100">
+                                        <p class="text-sm text-gray-600 dark:text-white">هزینه ارسال: <span
+                                                class="delivery-cost">۳۵,۰۰۰</span> تومان</p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="border border-gray-200 rounded-lg p-4 hover:border-primary-500 transition-all">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <h3 class="font-medium text-gray-700 dark:text-white">دریافت حضوری</h3>
+                                            <p class="text-sm text-gray-500 mt-1 dark:text-white">مراجعه به مراکز منتخب
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="text-green-500 text-sm ml-2 dark:text-white">موجود</span>
+                                            <input type="radio" name="delivery"
+                                                class="h-5 w-5 text-primary-600 delivery-method" data-type="pickup">
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 pt-3 border-t border-gray-100 pickup-location"
+                                        style="display: none;">
+                                        <select
+                                            class="w-full focus:border-primary outline-0 px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-primary-500">
+                                            <option>مرکز خرید ملت - شعبه مرکزی</option>
+                                            <option>مرکز خرید ایران مال - طبقه دوم</option>
+                                            <option>مرکز خرید کوروش - واحد ۱۲۳</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select the product to send -->
+                        <div
+                            class="dark:bg-background-dark dark:text-white bg-white rounded-lg drop-shadow-lg border-gray-300 border-1 p-4">
+                            <h2
+                                class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">
+                                محصولات قابل ارسال</h2>
+
+                            <div class="space-y-4">
+                                <div class="flex items-center border-b border-gray-100 pb-4">
+                                    <img src={%static "assets/images/product/wach-1.png"%} alt="محصول"
+                                        class="w-16 h-16 object-cover rounded-md">
+                                    <div class="mr-3 flex-1">
+                                        <h3 class="font-medium text-gray-700 dark:text-white">کفش ورزشی نایک مدل Air Max
+                                        </h3>
+                                        <p class="text-sm text-gray-500 dark:text-white">رنگ: مشکی - سایز: ۴۱</p>
+                                    </div>
+                                    <span class="text-green-500 text-sm ">موجود</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <img src={%static "assets/images/product/wach-4.png"%} alt="محصول"
+                                        class="w-16 h-16 object-cover rounded-md">
+                                    <div class="mr-3 flex-1">
+                                        <h3 class="font-medium text-gray-700 dark:text-white">تیشرت مردانه آدیداس</h3>
+                                        <p class="text-sm text-gray-500 dark:text-white">رنگ: سفید - سایز: L</p>
+                                    </div>
+                                    <span class="text-green-500 text-sm">موجود</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Choose a time to send -->
+                        <div
+                            class="dark:bg-background-dark dark:text-white bg-white rounded-lg drop-shadow-lg border-gray-300 border-1 p-4">
+                            <h2
+                                class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">
+                                زمان تحویل را انتخاب کنید</h2>
+
+                            <div class="mb-6">
+                                <div class="flex overflow-x-auto pb-2 space-x-2" id="day-selector">
+                                    <!-- Days are filled with JavaScript -->
+                                </div>
+                            </div>
+
+                            <h3 class="font-medium text-gray-700 mb-3 dark:text-white">بازه زمانی تحویل</h3>
+                            <div class="grid grid-cols-2 gap-3" id="time-slots">
+                                <!-- Time intervals are filled with JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Cost summary and continue button -->
+                        <div
+                            class="dark:bg-background-dark dark:text-white bg-white rounded-lg drop-shadow-lg border-gray-300 border-1 p-4">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 dark:text-white">هزینه ارسال:</span>
+                                <span class="font-medium delivery-cost-summary dark:text-white">۳۵,۰۰۰ تومان</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 dark:text-white">زمان تحویل:</span>
+                                <span class="font-medium delivery-time-summary dark:text-white">فردا - جمعه ۹ صبح تا ۱۲
+                                    ظهر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- calculate -->
+                <div class="xl:col-span-1 col-span-4 w-full">
+                    <div
+                        class="dark:bg-background-dark sticky top-0 dark:text-white bg-white rounded-lg drop-shadow-lg border-gray-300 border-1 p-4">
+                        <ul class="space-y-5">
+                            <li class="flex justify-between item-center dark:text-white">
+                                <h6 class="font-bold">قیمت کالاها</h6>
+                                <p>1,220,000 تومان</p>
+                            </li>
+                            <li class="flex justify-between item-center dark:text-white">
+                                <h6 class="font-bold">تخفیف کالاها</h6>
+                                <p class="text-primary font-bold">1,220,000 تومان</p>
+                            </li>
+                            <li class="flex justify-between item-center dark:text-white">
+                                <h6 class="font-bold">مجموع</h6>
+                                <p>3,220,000 تومان</p>
+                            </li>
+                            <li>
+                                <a href=""
+                                    class="p-2 bg-primary-grad w-full block text-center rounded-lg text-white">تسویه
+                                    حساب</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= end content section ================= -->
+
+    <!-- ================= start footer section ================= -->
+    {% include 'base/footer.html' %}
+
+    <!-- ================= end footer section ================= -->
+
+    <!-- ================= start cart offcanvas ================= -->
+    <!-- Offcanvas Cart -->
+    <div id="offcanvas-left"
+        class="offcanvas invisible dark:bg-background-dark dark:text-white fixed top-0 left-0 sm:w-100 w-[80%] h-full bg-white shadow-lg transform -translate-x-full transition-transform opacity-0 z-50"
+        role="dialog" aria-labelledby="cart-title" aria-modal="true">
+        <!-- Header -->
+        <header class="border-b p-3 flex items-center justify-between border-gray-400">
+            <h2 id="cart-title" class="font-bold text-base">سبد خرید شما</h2>
+            <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن سبد خرید">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </header>
+        <!-- Cart Items -->
+        <main class="relative space-y-4 divide-y divide-gray-200 p-3 overflow-y-scroll h-full">
+            <!-- Product 1 -->
+            <div class="py-3 last:mb-35" itemscope itemtype="http://schema.org/Product">
+                <div class="flex flex-wrap items-center">
+                    <div class="text-right w-1/3">
+                        <img class="max-w-full" src={%static "assets/images/product/wach-1.png"%}
+                            alt="ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve" itemprop="image"
+                            loading="lazy">
+                    </div>
+                    <div class="w-2/3 space-y-4">
+                        <h3 class="font-bold leading-7" itemprop="name">
+                            ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve
+                        </h3>
+                        <div class="flex items-center justify-between">
+                            <del class="text-rose-600 dark:text-white line-through" itemprop="priceCurrency"
+                                content="IRR">
+                                <span itemprop="highPrice">5,000,000</span>
+                            </del>
+                            <ins class="no-underline text-xl text-green-600 font-bold" itemprop="price"
+                                content="2500000">
+                                2,500,000 <span class="text-sm font-normal text-gray-700 dark:text-white">تومان</span>
+                            </ins>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span itemprop="quantity">تعداد: 3</span>
+                            <a href="#"
+                                class="bg-red-100 dark:border dark:bg-transparent dark:text-white text-red-950 p-2 rounded-lg"
+                                role="button" aria-label="حذف محصول از سبد خرید">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="p-2 absolute bottom-0 right-0 left-0 bg-white dark:border-0  dark:bg-background-dark border border-gray-400">
+            <div class="flex items-center justify-between">
+                <div class="space-y-2">
+                    <span class="inline-block text-lg">جمع کل</span>
+                    <h3 class="font-bold text-xl" itemprop="totalPrice" content="11000000">
+                        11,000,000 تومان
+                    </h3>
+                </div>
+                <div class="text-end">
+                    <a href="/checkout" class="bg-primary-grad hover:bg-primary-600 text-white py-2 px-4 rounded-lg"
+                        role="button" aria-label="تکمیل فرایند خرید">
+                        تکمیل خرید
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay transition fixed inset-0 z-40 bg-black/70 hidden" onclick="closeOffcanvas()" role="presentation"
+        aria-hidden="true"></div>
+    <!-- ================= end cart offcanvas ================= -->
+
+    <!-- ================= start filter modal ================= -->
+    <div id="filterModal" role="dialog" aria-modal="true" aria-labelledby="filterModalTitle" data-modal-id="filterModal"
+        class="modal hidden fixed inset-0 z-50 overflow-auto backdrop-blur bg-opacity-50">
+        <div class="relative p-4 w-full max-w-md m-auto flex items-center min-h-screen">
+            <div class="relative dark:bg-background-dark border-gray-300 border bg-white rounded-lg shadow-lg w-full"
+                itemscope itemtype="http://schema.org/Place">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-4 dark:border-b-white border-b">
+                    <h3 id="filterModalTitle" class="text-xl  dark:text-white" itemprop="name">فیلتر بر اساس
+                        شهر</h3>
+                    <button data-modal-close class="text-gray-500 hover:text-gray-700 cursor-pointer text-3xl"
+                        aria-label="بستن پنجره فیلتر">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Content -->
+                <div class="p-4">
+                    <!-- Cities Data -->
+                    <meta itemprop="address"
+                        content="تهران,مشهد,اصفهان,تبریز,شیراز,اهواز,قم,کرج,کرمانشاه,ارومیه,زاهدان,رشت,همدان,یزد,اردبیل,بندرعباس,کیش,ساری,گرگان,بجنورد">
+                    <div id="citySelector"
+                        data-cities="تهران,مشهد,اصفهان,تبریز,شیراز,اهواز,قم,کرج,کرمانشاه,ارومیه,زاهدان,رشت,همدان,یزد,اردبیل,بندرعباس,کیش,ساری,گرگان,بجنورد">
+                    </div>
+                    <!-- Search Form -->
+                    <form id="searchForm" class="mb-2" role="search">
+                        <label for="search" class="mb-2 block text-sm font-medium dark:text-white text-gray-900">
+                            جستجوی شهر
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="search" id="search"
+                                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary dark:bg-background-dark dark:text-white"
+                                placeholder="نام شهر را وارد کنید" aria-describedby="searchDescription" required>
+                        </div>
+                        <p id="searchDescription" class="sr-only">برای جستجو در بین شهرهای موجود تایپ کنید</p>
+                    </form>
+                    <!-- Selected Cities -->
+                    <div id="selectedCities" class="flex my-3 flex-wrap gap-2" role="status" aria-live="polite"></div>
+                    <!-- Cities List -->
+                    <ul id="cityList"
+                        class="w-full h-80 overflow-y-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                        role="listbox" aria-labelledby="filterModalTitle">
+                        <template id="cityTemplate">
+                            <li role="option" class="p-3 border-b cursor-pointer hover:bg-gray-100" tabindex="0"
+                                itemprop="containsPlace" itemscope itemtype="http://schema.org/City">
+                                <span itemprop="name"></span>
+                            </li>
+                        </template>
+                    </ul>
+                    <!-- Filter Button -->
+                    <div class="mt-4">
+                        <button id="filterButton"
+                            class="w-full px-4 py-3 cursor-pointer bg-primary text-white rounded-lg hover:bg-primary-600 transition-colors"
+                            aria-label="اعمال فیلتر بر اساس شهرهای انتخاب شده">
+                            فیلتر کن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= end filter modal ================= -->
+
+    <!-- ================= start discount modal ================= -->
+    <div id="discountModal" role="dialog" aria-modal="true" aria-labelledby="discountModalTitle"
+        data-modal-id="discountModal" class="modal hidden fixed inset-0 z-50 overflow-auto backdrop-blur bg-opacity-50">
+        <div class="relative p-4 w-full max-w-md m-auto flex items-center min-h-screen">
+            <div class="relative dark:bg-background-dark border-gray-300 border bg-white rounded-lg shadow-lg w-full"
+                itemscope itemtype="http://schema.org/Place">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-4 dark:border-b-white border-b">
+                    <h3 id="discountModalTitle" class="text-xl  dark:text-white" itemprop="name">
+                        وارد کردن کد تخفیف
+                    </h3>
+                    <button data-modal-close class="text-gray-500 hover:text-gray-700 ms-2 cursor-pointer text-3xl"
+                        aria-label="بستن پنجره مدال">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Content -->
+                <div class="p-4">
+                    <form>
+                        <div class="mb-4">
+                            <label for="discountCode"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">کد تخفیف:</label>
+                            <input placeholder="کد تخفیف را وار کنید:" type="text" id="discountCode"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                required="">
+                        </div>
+                        <button class="py-1 px-3 bg-primary-grad text-white rounded">بررسی</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= end discount modal ================= -->
+
+
+    <!-- ================= start responsive menu offcanvas ================= -->
+    <div id="offcanvas-right"
+        class="offcanvas invisible overflow-y-scroll fixed top-0 right-0 sm:w-100 w-[80%] h-full bg-white dark:bg-background-dark shadow-lg transform -translate-x-full transition-transform opacity-0 z-50"
+        role="navigation" aria-labelledby="store-menu-title" aria-modal="true">
+        <div class="border-b p-3 flex items-center justify-between border-gray-400">
+            <h2 id="store-menu-title" class="font-bold text-base dark:text-white">فروشگاه آرینو</h2>
+            <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن منوی فروشگاه">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="relative space-y-4 divide-y divide-gray-200 p-3 overflow-y-scroll h-full"
+            style="padding-left: 0!important;" aria-label="منوی اصلی">
+            <ul class="space-y-2 text-sm">
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope
+                    itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="/" class="block" itemprop="url">صفحه اصلی</a>
+                </li>
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope
+                    itemtype="http://schema.org/SiteNavigationElement">
+                    <button class="flex justify-between w-full text-right" aria-expanded="false" aria-controls="menu1"
+                        id="menu1-button" onclick="toggleDropdown('menu1')">
+                        <span itemprop="name">گوشی موبایل</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform"
+                            id="icon-menu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul id="menu1" class="hidden bg-gray-200 dark:bg-background-dark dark:text-white" role="menu"
+                        aria-labelledby="menu1-button">
+                        <li class="border-b border-gray-300" itemscope
+                            itemtype="http://schema.org/SiteNavigationElement">
+                            <button class="flex justify-between w-full px-6 py-2 text-right" aria-expanded="false"
+                                aria-controls="submenu1" id="submenu1-button" onclick="toggleDropdown('submenu1')">
+                                <span itemprop="name">برند</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform"
+                                    id="icon-submenu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <ul id="submenu1" class="hidden bg-gray-100 dark:bg-zinc-500 dark:text-gray-200" role="menu"
+                                aria-labelledby="submenu1-button" itemscope itemtype="http://schema.org/Brand">
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">سامسونگ</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">اپل</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">شیائومی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">هواوی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">نوکیا</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">ال جی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">سونی</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">گوگل</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">وان پلاس</li>
+                                <li class="px-8 py-2 border-b border-gray-200" itemprop="name">موتورولا</li>
+                            </ul>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200" itemscope
+                            itemtype="http://schema.org/ProductCategory">
+                            <a href="/category/flagship" class="block" itemprop="name">پرچمدار</a>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200" itemscope
+                            itemtype="http://schema.org/ProductCategory">
+                            <a href="/category/mid-range" class="block" itemprop="name">میان رده</a>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200" itemscope
+                            itemtype="http://schema.org/ProductCategory">
+                            <a href="/category/budget" class="block" itemprop="name">اقتصادی</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope
+                    itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="/pages" class="block" itemprop="url">صفحات</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="overlay z-40 transition fixed inset-0 bg-black/70 hidden" onclick="closeOffcanvas()" role="presentation"
+        aria-hidden="true"></div>
+    <!-- ================= end responsive menu offcanvas ================= -->
+
+    <!-- ================= start nav mobile menu ================= -->
+    <nav
+        class="fixed shadow-xl border-t-zinc-300 dark:border-0 bottom-0 z-20 lg:hidden left-0 right-0 dark:bg-background-dark dark:text-white bg-white border-t border-gray-200">
+        <div class="flex justify-around items-center flex-row-reverse py-3 px-4">
+            <!-- Home -->
+            <a href="#" class="flex flex-col items-center text-primary space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <span class="text-xs font-bold">خانه</span>
+            </a>
+            <!-- cart -->
+            <a href="#" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+                <span class="text-xs dark:text-white">سبد خرید</span>
+            </a>
+            <!-- Profile -->
+            <a href="#" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                <span class="text-xs dark:text-white">پنل کاربری</span>
+            </a>
+            <!-- Top -->
+            <a href="#" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+                <span class="text-xs dark:text-white">رفتن به بالا</span>
+            </a>
+        </div>
+    </nav>
+    <!-- ================= end nav mobile menu ================= -->
+    {% include 'base/nav_mobile_menu.html' %}
+
+    <!-- shipping -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sample data for days and time periods
+            const days = [
+                { id: 1, name: 'امروز', dayName: 'پنجشنبه', date: '۱۴۰۲/۰۵/۲۰', available: true },
+                { id: 2, name: 'فردا', dayName: 'جمعه', date: '۱۴۰۲/۰۵/۲۱', available: true },
+                { id: 3, name: 'شنبه', date: '۱۴۰۲/۰۵/۲۲', available: true },
+                { id: 4, name: 'یکشنبه', date: '۱۴۰۲/۰۵/۲۳', available: true },
+                { id: 5, name: 'دوشنبه', date: '۱۴۰۲/۰۵/۲۴', available: true },
+                { id: 6, name: 'سه‌شنبه', date: '۱۴۰۲/۰۵/۲۵', available: false }
+            ];
+
+            const timeSlots = [
+                { id: 1, name: '۹ صبح تا ۱۲ ظهر', cost: 'معمولی', available: true },
+                { id: 2, name: '۱۲ ظهر تا ۴ بعدازظهر', cost: 'معمولی', available: true },
+                { id: 3, name: '۴ بعدازظهر تا ۸ شب', cost: 'معمولی', available: true },
+                { id: 4, name: '۸ شب تا ۱۲ شب', cost: '+۱۰٪', available: true }
+            ];
+
+            // پر کردن لیست روزها
+            const daySelector = document.getElementById('day-selector');
+            days.forEach(day => {
+                const dayElement = document.createElement('button');
+                dayElement.className = `flex-shrink-0 px-4 py-2 rounded-lg font-medium day-option ${day.available ? 'border border-gray-300 hover:bg-gray-50' : 'border border-gray-200 text-gray-400 cursor-not-allowed'}`;
+                if (day.id === 1) {
+                    dayElement.classList.add('bg-primary-100', 'text-primary-700');
+                }
+                dayElement.textContent = `${day.name}${day.dayName ? ' - ' + day.dayName : ''}`;
+                dayElement.dataset.dayId = day.id;
+                dayElement.dataset.dayName = `${day.name}${day.dayName ? ' - ' + day.dayName : ''}`;
+                dayElement.disabled = !day.available;
+
+                dayElement.addEventListener('click', function () {
+                    document.querySelectorAll('.day-option').forEach(opt => {
+                        opt.classList.remove('bg-primary-100', 'text-primary-700');
+                        opt.classList.add('border-gray-300', 'hover:bg-gray-50');
+                    });
+                    this.classList.add('bg-primary-100', 'text-primary-700');
+                    this.classList.remove('border-gray-300', 'hover:bg-gray-50');
+                    updateDeliverySummary();
+                });
+
+                daySelector.appendChild(dayElement);
+            });
+
+            // پر کردن بازه‌های زمانی
+            const timeSlotsContainer = document.getElementById('time-slots');
+            timeSlots.forEach(slot => {
+                const slotElement = document.createElement('button');
+                slotElement.className = `py-3 px-4 border rounded-lg time-slot ${slot.available ? 'border-gray-300 hover:border-primary-500 hover:bg-primary-50' : 'border-gray-200 text-gray-400 cursor-not-allowed'}`;
+                if (slot.id === 3) {
+                    slotElement.classList.add('border-primary-500', 'bg-primary-50');
+                }
+
+                const nameSpan = document.createElement('span');
+                nameSpan.className = 'block font-medium';
+                nameSpan.textContent = slot.name;
+
+                const costSpan = document.createElement('span');
+                costSpan.className = 'block text-sm mt-1';
+                costSpan.textContent = `هزینه ${slot.cost}`;
+
+                slotElement.appendChild(nameSpan);
+                slotElement.appendChild(costSpan);
+                slotElement.dataset.slotId = slot.id;
+                slotElement.dataset.slotName = slot.name;
+                slotElement.disabled = !slot.available;
+
+                slotElement.addEventListener('click', function () {
+                    document.querySelectorAll('.time-slot').forEach(slt => {
+                        slt.classList.remove('border-primary-500', 'bg-primary-50', 'text-primary-700');
+                        slt.classList.add('border-gray-300', 'hover:border-primary-500', 'hover:bg-primary-50');
+                    });
+                    this.classList.add('border-primary-500', 'bg-primary-50');
+                    this.classList.remove('border-gray-300', 'hover:border-primary-500', 'hover:bg-primary-50');
+                    updateDeliverySummary();
+                });
+
+                timeSlotsContainer.appendChild(slotElement);
+            });
+
+            // تغییر روش ارسال
+            document.querySelectorAll('.delivery-method').forEach(method => {
+                method.addEventListener('change', function () {
+                    if (this.dataset.type === 'pickup') {
+                        document.querySelector('.pickup-location').style.display = 'block';
+                        document.querySelector('.delivery-cost').textContent = 'رایگان';
+                        document.querySelector('.delivery-cost-summary').textContent = 'رایگان';
+                    } else {
+                        document.querySelector('.pickup-location').style.display = 'none';
+                        document.querySelector('.delivery-cost').textContent = '۳۵,۰۰۰';
+                        document.querySelector('.delivery-cost-summary').textContent = '۳۵,۰۰۰ تومان';
+                    }
+                    updateDeliverySummary();
+                });
+            });
+
+            // به‌روزرسانی خلاصه سفارش
+            function updateDeliverySummary() {
+                const selectedDay = document.querySelector('.day-option.bg-primary-100');
+                const selectedTime = document.querySelector('.time-slot.border-primary-500');
+
+                if (selectedDay && selectedTime) {
+                    const dayName = selectedDay.dataset.dayName;
+                    const timeName = selectedTime.dataset.slotName;
+                    document.querySelector('.delivery-time-summary').textContent = `${dayName} ${timeName}`;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
