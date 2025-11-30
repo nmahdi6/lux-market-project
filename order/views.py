@@ -8,3 +8,6 @@ def cart_empty(request):
 
 def checkout(request):
     return render(request, "order/checkout.html") 
+
+def payment(request):
+    return render(request, "order/payment.html") 
