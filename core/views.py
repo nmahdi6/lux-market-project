@@ -17,3 +17,6 @@ def privacy_policy(request):
 
 def terms_and_rules(request):
     return render(request, "core/terms-and-rules.html")
+
+def page_404(request):
+    return render(request, "core/page-404.html")
