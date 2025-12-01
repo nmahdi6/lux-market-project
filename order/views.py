@@ -22,18 +22,3 @@ def return_procedure(request):
     return render(request, "order/return-procedure.html") 
 
 
-
-def order_resend(request):
-    return render(request, "account/orders/seller-panel-order-resend.html") 
-
-def order_edit(request):
-    return render(request, "account/orders/seller-panel-order-edit.html") 
-
-def order_detail(request):
-    return render(request, "account/orders/seller-panel-order-detail.html") 
-
-def order_deadline(request):
-    return render(request, "account/orders/seller-panel-order-deadline.html") 
-
-def order_cancell(request):
-    return render(request, "account/orders/seller-panel-order-cancell.html") 

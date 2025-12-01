@@ -1,23 +1,9 @@
+{% load static %}
 <!doctype html>
 <html lang="en" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>قالب فرشگاهی آرینو</title>
-    <meta name="description" content="قالب فرشگاهی آرینو، بهترین قالب برای فروشگاه‌های اینترنتی با طراحی مدرن و واکنش‌گرا.">
-    <meta name="keywords" content="قالب فروشگاهی, قالب آرینو, فروشگاه اینترنتی, طراحی واکنش‌گرا">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="آرینو">
-    <meta name="copyright" content="تمامی حقوق متعلق به آرینو است.">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/assets/images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/images/favicon_io/favicon-16x16.png">
-    <link rel="canonical" href="https://example.com/your-page-url">
-    <link rel="stylesheet" href="assets/js/plugin/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="preload" href="static/assets/fonts/payda/PeydaWebFaNum-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <title>قالب فرشگاهی آرینو</title>    
+    {% include 'base/header.html' %}
 </head>
 <body class="bg-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark transition-colors duration-200">
 
@@ -85,7 +71,7 @@
                 <div class="mt-auto p-4 bg-gray-50 dark:bg-gray-900 rounded-xl">
                     <div class="flex items-center">
                         <div class="relative">
-                            <img class="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800 shadow" src="static/assets/images/user/user.jpg" alt="پروفایل کاربر">
+                            <img class="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800 shadow" src={%static "assets/images/user/user.jpg"%} alt="پروفایل کاربر">
                             <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-success dark:bg-success-dark border-2 border-white dark:border-gray-800"></span>
                         </div>
                         <div class="mr-3">
@@ -162,7 +148,7 @@
                             class="flex items-center focus:outline-none">
                         <div class="relative">
                             <img class="h-8 w-8 max-sm:hidden rounded-full border-2 border-white dark:border-gray-800 shadow"
-                                 src="static/assets/images/user/user.png" alt="پروفایل کاربر">
+                                 src={%static "assets/images/user/user.png"%} alt="پروفایل کاربر">
                             <span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-green-500 dark:bg-green-400 border-2 border-white dark:border-gray-800"></span>
                         </div>
                         <span class="mr-2 text-sm font-medium text-gray-900 dark:text-white">مریم محمدی</span>
@@ -220,11 +206,11 @@
             <!-- Page header -->
             <div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between">
                 <div>
-                    <h2 class="text-2xl font-bold text-dark dark:text-light">درخواست مرجوعی کالا</h2>
-                    <p class="text-gray-600 dark:text-gray-400">فرم درخواست مرجوعی کالاهای خریداری شده</p>
+                    <h2 class="text-2xl font-bold text-dark dark:text-light">جزئیات مرجوعی کالا</h2>
+                    <p class="text-gray-600 dark:text-gray-400">تکمیل اطلاعات و ثبت نهایی درخواست مرجوعی</p>
                 </div>
                 <div class="mt-4 md:mt-0">
-                    <a href="#" class="inline-flex justify-center items-center px-4 py-2 text-sm font-medium rounded-lg bg-white dark:bg-gray-700 text-dark dark:text-light hover:bg-gray-100 dark:hover:bg-gray-600 border border-gray-200 dark:border-gray-600">
+                    <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-white dark:bg-gray-700 text-dark dark:text-light hover:bg-gray-100 dark:hover:bg-gray-600 border border-gray-200 dark:border-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
                         </svg>
@@ -236,33 +222,35 @@
             <!-- Refund Request Steps -->
             <div class="bg-white dark:bg-card-dark rounded-xl shadow-soft dark:shadow-soft-dark p-6 mb-6 border border-gray-100 dark:border-gray-700">
                 <div class="relative">
-                    <!-- Progress line -->
+                    <!-- خط پیشرفت -->
                     <div class="absolute top-5 right-0 left-0 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
-                        <div class="h-1 bg-primary dark:bg-primary-dark rounded-full" style="width: 33%"></div>
+                        <div class="h-1 bg-primary dark:bg-primary-dark rounded-full" style="width: 66%"></div>
                     </div>
 
                     <div class="relative grid grid-cols-3 gap-4">
-                        <!-- Step 1 - Active -->
+                        <!-- مرحله 1 - تکمیل شده -->
                         <div class="text-center">
                             <div class="mx-auto w-10 h-10 rounded-full bg-primary text-white dark:bg-primary-dark flex items-center justify-center relative z-10">
-                                1
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
                             <div class="mt-2">
                                 <p class="text-sm font-medium text-dark dark:text-light">انتخاب کالا</p>
                             </div>
                         </div>
 
-                        <!-- Step 2 - Disabled -->
+                        <!-- مرحله 2 - فعال -->
                         <div class="text-center">
-                            <div class="mx-auto w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 flex items-center justify-center relative z-10">
+                            <div class="mx-auto w-10 h-10 rounded-full bg-primary text-white dark:bg-primary-dark flex items-center justify-center relative z-10">
                                 2
                             </div>
                             <div class="mt-2">
-                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">جزئیات مرجوعی</p>
+                                <p class="text-sm font-medium text-dark dark:text-light">جزئیات مرجوعی</p>
                             </div>
                         </div>
 
-                        <!-- Step 3 - Disabled -->
+                        <!-- مرحله 3 - غیرفعال -->
                         <div class="text-center">
                             <div class="mx-auto w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 flex items-center justify-center relative z-10">
                                 3
@@ -275,24 +263,32 @@
                 </div>
             </div>
 
-            <!-- Return Request Form -->
+            <!-- Order information -->
             <div class="bg-white dark:bg-card-dark rounded-xl shadow-soft dark:shadow-soft-dark p-6 mb-6 border border-gray-100 dark:border-gray-700">
-                <h3 class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">1. انتخاب سفارش و کالاهای مورد نظر</h3>
-
-                <div class="mb-6 relative">
-                    <label for="order-select" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">انتخاب سفارش</label>
-                    <select id="order-select" class="appearance-none w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                        <option value="">لطفا یک سفارش را انتخاب کنید</option>
-                        <option value="ORD-12348">سفارش #ORD-12348 - 1402/06/05 - مبلغ: 10,550,000 تومان</option>
-                        <option value="ORD-12347">سفارش #ORD-12347 - 1402/05/28 - مبلغ: 8,250,000 تومان</option>
-                        <option value="ORD-12346">سفارش #ORD-12346 - 1402/05/20 - مبلغ: 5,750,000 تومان</option>
-                    </select>
-                    <div class="absolute inset-y-0 top-1/3 left-3 flex items-center pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
+                <h3 class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">اطلاعات سفارش</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">شماره سفارش:</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">#ORD-12348</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">تاریخ سفارش:</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">1402/06/05 - 15:32</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">مبلغ سفارش:</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">10,550,000 تومان</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">وضعیت سفارش:</p>
+                        <p class="text-sm text-success dark:text-success-dark">تحویل شده</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Items selected for return -->
+            <div class="bg-white dark:bg-card-dark rounded-xl shadow-soft dark:shadow-soft-dark p-6 mb-6 border border-gray-100 dark:border-gray-700">
+                <h3 class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">کالاهای انتخاب شده برای مرجوعی</h3>
 
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -301,7 +297,7 @@
                             <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">محصول</th>
                             <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">قیمت</th>
                             <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">تعداد</th>
-                            <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">عملیات</th>
+                            <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">جمع</th>
                         </tr>
                         </thead>
                         <tbody class="bg-white dark:bg-card-dark divide-y divide-gray-200 dark:divide-gray-700">
@@ -309,7 +305,7 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-16 w-16">
-                                        <img class="h-16 w-16 rounded-md object-contain" src="static/assets/images/product/mobile-4.png" alt="محصول">
+                                        <img class="h-16 w-16 rounded-md object-contain" src={%static "assets/images/product/mobile-4.png"%} alt="محصول">
                                     </div>
                                     <div class="mr-4">
                                         <div class="text-sm font-medium text-dark dark:text-light">گوشی موبایل سامسونگ مدل Galaxy A23</div>
@@ -319,55 +315,97 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">8,500,000 تومان</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">1</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-primary dark:text-primary-dark rounded border-gray-300 dark:border-gray-600 focus:ring-primary dark:focus:ring-primary-dark">
-                                    <span class="mr-2">انتخاب برای مرجوعی</span>
-                                </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 h-16 w-16">
-                                        <img class="h-16 w-16 rounded-md object-contain" src="static/assets/images/product/mobile-5.png" alt="محصول">
-                                    </div>
-                                    <div class="mr-4">
-                                        <div class="text-sm font-medium text-dark dark:text-light">هدفون بی سیم مدل WH-CH510</div>
-                                        <div class="text-sm text-gray-500 dark:text-gray-400">رنگ: سفید</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">1,250,000 تومان</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">2</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-primary dark:text-primary-dark rounded border-gray-300 dark:border-gray-600 focus:ring-primary dark:focus:ring-primary-dark">
-                                    <span class="mr-2">انتخاب برای مرجوعی</span>
-                                </label>
-                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">8,500,000 تومان</td>
                         </tr>
                         </tbody>
+                        <tfoot class="bg-gray-50 dark:bg-gray-800">
+                        <tr>
+                            <td colspan="3" class="px-6 py-4 text-right text-sm font-medium text-gray-700 dark:text-gray-300">جمع کل مرجوعی:</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-700 dark:text-gray-300">8,500,000 تومان</td>
+                        </tr>
+                        </tfoot>
                     </table>
+                </div>
+            </div>
+
+            <!-- Return Details Form -->
+            <div class="bg-white dark:bg-card-dark rounded-xl shadow-soft dark:shadow-soft-dark p-6 mb-6 border border-gray-100 dark:border-gray-700">
+                <h3 class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">2. تکمیل اطلاعات مرجوعی</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative">
+                        <label for="return-reason" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">دلیل مرجوعی</label>
+                        <select id="return-reason" class="w-full appearance-none border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <option value="">لطفا دلیل مرجوعی را انتخاب کنید</option>
+                            <option value="wrong-item">کالای دریافتی با سفارش مغایرت دارد</option>
+                            <option value="damaged">کالای دریافتی آسیب دیده است</option>
+                            <option value="not-needed">نیاز به کالا ندارم</option>
+                            <option value="change-mind">نظر من تغییر کرده است</option>
+                            <option value="other">سایر دلایل</option>
+                        </select>
+                        <div class="absolute inset-y-0 top-1/3 left-3 flex items-center pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <label for="return-method" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">روش مرجوعی</label>
+                        <select id="return-method" class="w-full appearance-none border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <option value="">لطفا روش مرجوعی را انتخاب کنید</option>
+                            <option value="post">ارسال از طریق پست</option>
+                            <option value="courier">ارسال با پیک</option>
+                            <option value="store">تحویل به فروشگاه</option>
+                        </select>
+                        <div class="absolute inset-y-0 top-1/3 left-3 flex items-center pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mt-6">
-                    <h4 class="text-sm font-medium text-dark dark:text-light mb-2">نکات مهم قبل از ثبت درخواست:</h4>
-                    <ul class="list-disc mr-4 text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                        <li>کالاهای مرجوعی باید در شرایط اولیه و بدون استفاده باشند.</li>
-                        <li>کالاهای آسیب دیده یا ناقص قابل مرجوعی نمی‌باشند.</li>
-                        <li>مهلت مرجوعی کالاها حداکثر 7 روز از تاریخ تحویل می‌باشد.</li>
-                        <li>هزینه ارسال مرجوعی بر عهده مشتری می‌باشد.</li>
-                    </ul>
+                    <label for="return-description" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">توضیحات بیشتر (اختیاری)</label>
+                    <textarea id="return-description" rows="4" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="در صورت نیاز می‌توانید توضیحات بیشتری وارد کنید"></textarea>
                 </div>
 
-                <div class="mt-6 flex justify-end">
-                    <button class="px-6 flex items-center space-x-3 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary/80 transition-colors">
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">مدارک مورد نیاز</label>
+                    <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        <div class="mt-2 flex justify-center text-sm text-gray-600 dark:text-gray-400">
+                            <label for="file-upload" class="relative cursor-pointer bg-white dark:bg-gray-800 rounded-md font-medium text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary/70 focus-within:outline-none">
+                                <span>آپلود فایل‌های مورد نیاز</span>
+                                <input id="file-upload" name="file-upload" type="file" class="sr-only" multiple>
+                            </label>
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">تصاویر کالا، فاکتور خرید یا سایر مدارک مورد نیاز را آپلود کنید</p>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-primary dark:text-primary-dark rounded border-gray-300 dark:border-gray-600 focus:ring-primary dark:focus:ring-primary-dark">
+                        <span class="mr-2 text-sm text-gray-700 dark:text-gray-300">با <a href="#" class="text-primary dark:text-primary-dark hover:underline">قوانین و شرایط مرجوعی کالا</a> موافقت می‌کنم</span>
+                    </label>
+                </div>
+
+                <div class="mt-6 flex justify-between flex-wrap">
+                    <button class="px-6 mb-2 py-3 flex items-center space-x-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                        <span class="block">مرحله قبل</span>
+                    </button>
+                    <button class="px-6 mb-2 flex items-center space-x-3 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary/80 transition-colors">
                         <span class="block">مرحله بعد</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
                         </svg>
-
                     </button>
                 </div>
             </div>
@@ -375,33 +413,39 @@
             <!-- Return Guide -->
             <div class="bg-white dark:bg-card-dark rounded-xl shadow-soft dark:shadow-soft-dark p-6 border border-gray-100 dark:border-gray-700">
                 <h3 class="font-bold text-lg mb-4 relative pb-4 before:absolute before:right-0 before:bottom-0 before:size-2 before:rounded-full before:bg-primary after:absolute after:w-40 after:h-2 after:bottom-0 after:right-4 after:bg-primary after:rounded-lg">راهنمای مرجوعی کالا</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="border rounded-lg p-4 hover:shadow-md transition-shadow bg-white dark:bg-gray-800">
-                        <div class="flex items-center mb-2 text-primary dark:text-primary-dark">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd" />
                             </svg>
-                            <span class="text-sm font-medium">شرایط مرجوعی</span>
                         </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">کالا باید در شرایط اولیه و بدون استفاده باشد و تمامی قطعات و بسته‌بندی اصلی همراه آن باشد.</p>
+                        <div class="mr-3">
+                            <h4 class="text-sm font-medium text-dark dark:text-light">شرایط مرجوعی کالا</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">کالا باید در شرایط اولیه و بدون استفاده باشد. تمامی قطعات، لوازم جانبی و بسته‌بندی اصلی باید همراه کالا باشد. کالاهای آسیب دیده یا ناقص قابل مرجوعی نمی‌باشند.</p>
+                        </div>
                     </div>
-                    <div class="border rounded-lg p-4 hover:shadow-md transition-shadow bg-white dark:bg-gray-800">
-                        <div class="flex items-center mb-2 text-primary dark:text-primary-dark">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd" />
                             </svg>
-                            <span class="text-sm font-medium">مهلت مرجوعی</span>
                         </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">مهلت مرجوعی کالاها حداکثر 7 روز از تاریخ تحویل می‌باشد.</p>
+                        <div class="mr-3">
+                            <h4 class="text-sm font-medium text-dark dark:text-light">زمانبندی مرجوعی</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">مهلت مرجوعی کالاها حداکثر 7 روز از تاریخ تحویل می‌باشد. پس از تایید درخواست، شما 3 روز فرصت دارید کالا را به فروشگاه بازگردانید.</p>
+                        </div>
                     </div>
-                    <div class="border rounded-lg p-4 hover:shadow-md transition-shadow bg-white dark:bg-gray-800">
-                        <div class="flex items-center mb-2 text-primary dark:text-primary-dark">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primary-dark" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd" />
                             </svg>
-                            <span class="text-sm font-medium">هزینه مرجوعی</span>
                         </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">هزینه ارسال مرجوعی بر عهده مشتری می‌باشد و در صورت تایید مرجوعی، مبلغ کالا عودت داده می‌شود.</p>
+                        <div class="mr-3">
+                            <h4 class="text-sm font-medium text-dark dark:text-light">هزینه مرجوعی</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">هزینه ارسال مرجوعی بر عهده مشتری می‌باشد. در صورت تایید مرجوعی، مبلغ کالا پس از کسر هزینه ارسال، به حساب شما عودت داده می‌شود.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -438,7 +482,7 @@
             <div class="flex items-start space-x-3 rtl:space-x-reverse">
                 <div class="flex flex-col space-y-2">
                     <div class="flex items-center space-x-2">
-                        <img class="h-12 w-12 rounded-full" src="static/assets/images/user/user.jpg" alt="آواتار کاربر">
+                        <img class="h-12 w-12 rounded-full" src={%static "assets/images/user/user.jpg"%} alt="آواتار کاربر">
                         <p class="text-sm  text-gray-900 dark:text-white">کاربر مهمان</p>
                         <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-primary-grad text-white text-blue-800 ">جدید</span>
                     </div>
@@ -462,7 +506,7 @@
             <div class="flex items-start space-x-3 rtl:space-x-reverse">
                 <div class="flex flex-col space-y-2">
                     <div class="flex items-center space-x-2">
-                        <img class="h-12 w-12 rounded-full" src="static/assets/images/user/user.jpg" alt="آواتار کاربر">
+                        <img class="h-12 w-12 rounded-full" src={%static "assets/images/user/user.jpg"%} alt="آواتار کاربر">
                         <p class="text-sm  text-gray-900 dark:text-white">کاربر مهمان</p>
                         <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-primary-grad text-white text-blue-800 ">جدید</span>
                     </div>
@@ -652,7 +696,7 @@
                 <div class="mt-auto p-4 bg-gray-50 dark:bg-gray-900 rounded-xl">
                     <div class="flex items-center">
                         <div class="relative">
-                            <img class="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800 shadow" src="static/assets/images/user/user.jpg" alt="پروفایل کاربر">
+                            <img class="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800 shadow" src={%static "assets/images/user/user.jpg"%} alt="پروفایل کاربر">
                             <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-success dark:bg-success-dark border-2 border-white dark:border-gray-800"></span>
                         </div>
                         <div class="mr-3">
@@ -680,9 +724,8 @@
 
 <!-- /canvas responsive menu -->
 
+{% include 'base/nav_mobile_menu.html' %}
 
-<script src="assets/js/plugin/chart-js/chart.js"></script>
-<script src="assets/js/dependencies/app.js"></script>
 
 </body>
 </html>

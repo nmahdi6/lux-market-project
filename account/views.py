@@ -20,3 +20,21 @@ def ticket_form(request):
 
 def ticket_chat(request):
     return render(request, 'account/tickets/user-panel-ticket-chat.html')
+
+
+
+
+
+def order_detail(request):
+    return render(request, "account/orders/user-panel-order-detail.html") 
+
+
+def order_return_step_one(request):
+    return render(request, "account/orders/user-panel-order-return-step-one.html") 
+
+def order_return_step_two(request):
+    return render(request, "account/orders/user-panel-order-return-step-two.html") 
+
+def order_return_step_three(request):
+    return render(request, "account/orders/user-panel-order-return-step-three.html") 
+
